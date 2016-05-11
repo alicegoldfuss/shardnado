@@ -61,6 +61,8 @@ Currently, Shardnado only tries each shard assignment once. And if the node it c
 
 Shardnado will keep track of the shards it failed to assign and print them out at the end of the run. Re-running the script will assign those shards again.
 
+**NB:** Elasticsearch itself will timeout the requests after 30 minutes. If you're assigning hundreds of shards, Elasticsearch might not get to the assignments in time and the allocation requests will fail. So, even if Shardnado does everything perfectly, you might still have to rerun it. Because Elasticsearch.
+
 ## Testing
 
 You can test Shardnado with nose
@@ -78,7 +80,7 @@ $ nosetests test_shardnado.py
 
 - Add retry functionality, so shards that fail to assign will try again on a different node
 - Moar tests
-- Complicated and completely unneccessary title animation
+- Complicated and completely unnecessary title animation
 
 
 ### We choose to use Elasticsearch and do the other things, not because they are easy, but because they are shard.
