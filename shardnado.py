@@ -11,7 +11,7 @@ import random
 import requests
 import json
 
-SHARKNADO = '''
+SHARDNADO = '''
       (        )          (    (         )         (         )   
      )\ )  ( /(   (      )\ ) )\ )   ( /(   (     )\ )   ( /(   
     (()/(  )\())  )\    (()/((()/(   )\())  )\   (()/(   )\())  
@@ -27,7 +27,7 @@ def main(host):
     # Pulls in shards and nodes in cluster, pushes unassigned back in
     # Prints out report when finished
 
-    print SHARKNADO               
+    print SHARDNADO               
 
     unassigned_shards = get_shards(host)
 
