@@ -51,7 +51,9 @@ Assigning index test-index-11, shard 2 to elasticsearch-node-3.com
 
 ## Caveat Emptor
 
-You will probably have to run this more than once.
+Running this script may make your cluster unbalanced (especially if allocation is disabled, otherwise Elasticsearch should rebalance on its own).
+
+You will probably have to run this more than once:
 
 Currently, Shardnado only tries each shard assignment once. And if the node it chooses already has that index on it, it might fail.
 

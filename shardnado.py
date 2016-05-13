@@ -146,9 +146,6 @@ def assign_shards(unassigned_shards, nodes, host):
             print ">>" + assign_response.text
             still_unassigned.append(shard)
 
-        # Elasticsearch can get overwhelmed by requests, so sleep for 5 seconds
-        time.sleep(5)
-
     return still_unassigned
 
 if __name__ == '__main__':
